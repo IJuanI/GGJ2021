@@ -1,0 +1,9 @@
+# Hecho a mano, así que seguramente me esté comiendo varios ignore
+
+obj
+Logs
+Library
+Temp
+
+*.csproj
+*.sln
