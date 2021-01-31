@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_ColliderMask.m_Bits
       value: 7168
       objectReference: {fileID: 0}
+    - target: {fileID: 2169136023085596784, guid: fcab229efdcedaf42afc379057743d14,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 435489eb2a0a6824b949877bb5f34a7e, type: 2}
     - target: {fileID: 2326266079729277306, guid: fcab229efdcedaf42afc379057743d14,
         type: 3}
       propertyPath: toggled
@@ -22,6 +27,16 @@ PrefabInstance:
       propertyPath: lightColor
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2326266079729277306, guid: fcab229efdcedaf42afc379057743d14,
+        type: 3}
+      propertyPath: matOn
+      value: 
+      objectReference: {fileID: 2100000, guid: 435489eb2a0a6824b949877bb5f34a7e, type: 2}
+    - target: {fileID: 2326266079729277306, guid: fcab229efdcedaf42afc379057743d14,
+        type: 3}
+      propertyPath: matOff
+      value: 
+      objectReference: {fileID: 2100000, guid: 08a7d5147b861544aa3c9806baacaebe, type: 2}
     - target: {fileID: 2669699289698356754, guid: fcab229efdcedaf42afc379057743d14,
         type: 3}
       propertyPath: m_Name

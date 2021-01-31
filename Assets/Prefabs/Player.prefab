@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 1970760552001656914}
   - component: {fileID: 1970760552001656913}
   - component: {fileID: 5583865065974074740}
+  - component: {fileID: 8863119225965807015}
   m_Layer: 12
   m_Name: Player
   m_TagString: Untagged
@@ -223,6 +224,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f50c2d3da8b59d44baea161f604a002e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8863119225965807015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970760552001656926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0acd352d0f830f149a6e099181502488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightColor: 0
+  checkpoint: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!1 &3899972864914417111
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,8 +307,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1994672205
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 72c663163f998a34e8e78de3634fbaf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -316,7 +332,7 @@ GameObject:
   - component: {fileID: 1362794481189572444}
   - component: {fileID: 5265766132365129664}
   - component: {fileID: 849517066330417163}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Lantern
   m_TagString: Untagged
   m_Icon: {fileID: 0}

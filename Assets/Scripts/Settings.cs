@@ -29,11 +29,5 @@ namespace GGJ2021
     [Range(1f, 10f)]
     public float jumpGravity = 2.5f;
 
-    [Header("Graphics")]
-    [Range(0f, 1f)]
-    public float disabledPlatformAlpha = .5f;
-    [Range(0f, 1f)]
-    public float enabledPlatformAlpha = 1f;
-
   }
 }

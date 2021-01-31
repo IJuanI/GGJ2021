@@ -31,7 +31,7 @@ namespace GGJ2021
 
     private VisualEffect vfx;
 
-    private float vfxBaseAngle, vfxBaseAngleInv;
+    private float vfxBaseAngle;
 
     private float rawVelocity;
 
@@ -73,8 +73,7 @@ namespace GGJ2021
           .LoadAssetAsync<Settings>(Settings.PATH)
           .Completed += handle => settings = handle.Result;
 
-      vfxBaseAngle = vfx.GetFloat("OutAngle");
-      vfxBaseAngleInv = (vfxBaseAngle % 180 > 90) ? (vfxBaseAngle - 90) : (vfxBaseAngle + 90);
+      vfxBaseAngle = vfx.GetFloat("Out Angle");
     }
 
     private void FindComponents()
@@ -205,7 +204,7 @@ namespace GGJ2021
       lanternPos.x *= -1;
       lantern.transform.localPosition = lanternPos;
 
-      vfx.SetFloat("OutAngle", newDirection == Direction.RIGHT ? vfxBaseAngle : vfxBaseAngleInv);
+      vfx.SetFloat("Out Angle", newDirection == Direction.RIGHT ? vfxBaseAngle : (360 - vfxBaseAngle));
 
       currDirection = newDirection;
     }

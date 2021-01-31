@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 namespace GGJ2021
 {
@@ -6,6 +7,7 @@ namespace GGJ2021
   public class Lantern : MonoBehaviour
   {
 
+    [HideInInspector]
     public LightColor lightColor;
 
     [Range(0f, 90f)]
@@ -46,6 +48,10 @@ namespace GGJ2021
       baseRotation = transform.rotation.eulerAngles.z;
     }
 
+    void Start()
+    {
+      lightColor = GetComponentInParent<PlayerEnt>().lightColor;
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {

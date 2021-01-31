@@ -9,7 +9,8 @@ namespace GGJ2021
 
     public bool toggled = true;
 
-    private SpriteRenderer rend;
+    public Material matOn, matOff;
+    private MeshRenderer rend;
     private Collider2D coll;
     private Settings settings;
 
@@ -25,7 +26,7 @@ namespace GGJ2021
             Toggle(toggled);
           };
 
-      rend = GetComponent<SpriteRenderer>();
+      rend = GetComponent<MeshRenderer>();
       coll = GetComponent<Collider2D>();
       rendProps = new MaterialPropertyBlock();
     }
@@ -36,15 +37,9 @@ namespace GGJ2021
     {
       if (settings == null) return;
 
-      rend.GetPropertyBlock(rendProps);
-      Color color = rend.material.GetColor("_BaseColor");
-      if (enable)
-        color.a = settings.enabledPlatformAlpha;
-      else
-        color.a = settings.disabledPlatformAlpha;
+      if (enable) rend.material = matOn;
+      else rend.material = matOff;
 
-      rendProps.SetColor("_BaseColor", color);
-      rend.SetPropertyBlock(rendProps);
       if (coll) coll.enabled = enable;
 
       toggled = enable;

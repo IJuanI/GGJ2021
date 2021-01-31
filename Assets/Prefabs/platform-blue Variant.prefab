@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggled: 0
+  matOn: {fileID: 2100000, guid: e2220756048ff234e90bfbb0f0cf2b8f, type: 2}
+  matOff: {fileID: 2100000, guid: bf0822479a6c47e419abebc7bf86af42, type: 2}
   lightColor: 1
 --- !u!1001 &9064576546275723576
 PrefabInstance:
@@ -111,6 +113,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7192681743061567816, guid: 08d247ce0fbda394a9da6d57d9e736d5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bf0822479a6c47e419abebc7bf86af42, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08d247ce0fbda394a9da6d57d9e736d5, type: 3}
 --- !u!1 &2669699289698356754 stripped

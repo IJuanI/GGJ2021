@@ -18,9 +18,9 @@ TagManager:
   - Environment
   - Solid
   - Player1
+  - Render 2D
   - 
   - 
-  - 3D Obj
   - Player2
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Before
+    uniqueID: 2869408499
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
