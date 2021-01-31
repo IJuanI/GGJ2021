@@ -12,9 +12,11 @@ namespace GGJ2021
   {
 
     public Transform spawnPos;
-    public GameObject prefab;
+    public GameObject[] prefabs;
 
     public SpawnMode mode = SpawnMode.AUTO;
+
+    public bool spawnDestroyables = true;
 
     public int spawnLimit = -1;
 
@@ -34,7 +36,7 @@ namespace GGJ2021
     private IEnumerator RunLoop()
     {
       int count = 0;
-      while (count++ < burstSize)
+      while (count++ < burstSize || burstSize < 0)
       {
         yield return new WaitForSeconds(1 / spawnRate);
         Spawn();
@@ -48,7 +50,9 @@ namespace GGJ2021
       if (spawnLimit < 0 || spawnCount < spawnLimit)
       {
         spawnCount++;
-        GameObject newObject = Instantiate(prefab, spawnPos.position, spawnPos.rotation);
+        GameObject newObject = Instantiate(prefabs[Random.Range(0, prefabs.Length)], spawnPos.position, spawnPos.rotation);
+        if (spawnDestroyables)
+          newObject.AddComponent<Destroyable>();
         Spawnable spawnable;
         if (newObject.TryGetComponent<Spawnable>(out spawnable))
           spawnable.spawner = this;

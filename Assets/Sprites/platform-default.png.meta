@@ -4,31 +4,31 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -8081855812064676021
-    second: platform-default_0
+    second: platform-top-left
   - first:
       213: 8311779126646934408
-    second: platform-default_1
+    second: platform-top-middle
   - first:
       213: 9190655944090366553
-    second: platform-default_2
+    second: platform-top-right
   - first:
       213: 1843400946707919643
-    second: platform-default_3
+    second: platform-middle-right
   - first:
       213: 3864748235877022240
-    second: platform-default_4
+    second: platform-bottom-right
   - first:
       213: 6302055051923189225
-    second: platform-default_5
+    second: platform-bottom-middle
   - first:
       213: 2238714104824655948
-    second: platform-default_6
+    second: platform-bottom-left
   - first:
       213: -6587803074445157552
-    second: platform-default_7
+    second: platform-middle-left
   - first:
       213: 801696844968353408
-    second: platform-default_8
+    second: platform-fill
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -68,8 +68,8 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
-  spriteMeshType: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -138,15 +138,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: platform-default_0
+      name: platform-top-left
       rect:
         serializedVersion: 2
-        x: 0
+        x: 146
         y: 370
         width: 114
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,15 +159,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform-default_1
+      name: platform-top-middle
       rect:
         serializedVersion: 2
-        x: 123
+        x: 270
         y: 370
-        width: 661
+        width: 660
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,15 +180,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform-default_2
+      name: platform-top-right
       rect:
         serializedVersion: 2
-        x: 794
+        x: 940
         y: 370
-        width: 124
+        width: 121
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,15 +201,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform-default_3
+      name: platform-middle-right
       rect:
         serializedVersion: 2
-        x: 794
-        y: 99
-        width: 124
-        height: 261
+        x: 940
+        y: 169
+        width: 260
+        height: 121
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,15 +222,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform-default_4
+      name: platform-bottom-right
       rect:
         serializedVersion: 2
-        x: 794
+        x: 940
         y: 0
-        width: 124
-        height: 90
+        width: 121
+        height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,15 +243,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform-default_5
+      name: platform-bottom-middle
       rect:
         serializedVersion: 2
-        x: 123
+        x: 270
         y: 0
-        width: 662
-        height: 90
+        width: 660
+        height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,15 +264,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform-default_6
+      name: platform-bottom-left
       rect:
         serializedVersion: 2
-        x: 0
+        x: 146
         y: 0
-        width: 113
-        height: 89
+        width: 114
+        height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -285,15 +285,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform-default_7
+      name: platform-middle-left
       rect:
         serializedVersion: 2
         x: 0
-        y: 102
-        width: 114
-        height: 259
+        y: 173
+        width: 260
+        height: 114
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -306,15 +306,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: platform-default_8
+      name: platform-fill
       rect:
         serializedVersion: 2
-        x: 124
+        x: 270
         y: 100
         width: 660
         height: 260
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

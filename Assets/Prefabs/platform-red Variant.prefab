@@ -16,7 +16,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 435489eb2a0a6824b949877bb5f34a7e, type: 2}
+      objectReference: {fileID: 2100000, guid: 08a7d5147b861544aa3c9806baacaebe, type: 2}
     - target: {fileID: 2326266079729277306, guid: fcab229efdcedaf42afc379057743d14,
         type: 3}
       propertyPath: toggled

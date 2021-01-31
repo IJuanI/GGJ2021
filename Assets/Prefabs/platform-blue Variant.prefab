@@ -28,6 +28,11 @@ PrefabInstance:
       propertyPath: m_ColliderMask.m_Bits
       value: 68608
       objectReference: {fileID: 0}
+    - target: {fileID: 4920788189318722556, guid: 08d247ce0fbda394a9da6d57d9e736d5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5402312468298418906, guid: 08d247ce0fbda394a9da6d57d9e736d5,
         type: 3}
       propertyPath: m_LocalPosition.x
