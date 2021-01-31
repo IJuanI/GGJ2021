@@ -17,33 +17,36 @@ MonoBehaviour:
     m_End: 45
     m_Order: 4
     m_Sprites:
-    - {fileID: 0}
+    - {fileID: 8311779126646934408, guid: af442f2715991794c89f2c2666052a77, type: 3}
   - m_Start: -135
     m_End: -45
     m_Order: 3
-    m_Sprites: []
+    m_Sprites:
+    - {fileID: -6587803074445157552, guid: af442f2715991794c89f2c2666052a77, type: 3}
   - m_Start: 135
     m_End: 225
     m_Order: 2
-    m_Sprites: []
+    m_Sprites:
+    - {fileID: 6302055051923189225, guid: af442f2715991794c89f2c2666052a77, type: 3}
   - m_Start: 45
     m_End: 135
     m_Order: 1
-    m_Sprites: []
-  m_FillTexture: {fileID: 2800000, guid: 4cf8690ba6879524badf228b36d32cd3, type: 3}
+    m_Sprites:
+    - {fileID: 1843400946707919643, guid: af442f2715991794c89f2c2666052a77, type: 3}
+  m_FillTexture: {fileID: 2800000, guid: 6a241f9b7c74638448cc10d64cca5544, type: 3}
   m_CornerSprites:
   - m_CornerType: 0
     m_Sprites:
-    - {fileID: 0}
+    - {fileID: -8081855812064676021, guid: af442f2715991794c89f2c2666052a77, type: 3}
   - m_CornerType: 1
     m_Sprites:
-    - {fileID: 0}
+    - {fileID: 9190655944090366553, guid: af442f2715991794c89f2c2666052a77, type: 3}
   - m_CornerType: 2
     m_Sprites:
-    - {fileID: 0}
+    - {fileID: 2238714104824655948, guid: af442f2715991794c89f2c2666052a77, type: 3}
   - m_CornerType: 3
     m_Sprites:
-    - {fileID: 0}
+    - {fileID: 3864748235877022240, guid: af442f2715991794c89f2c2666052a77, type: 3}
   - m_CornerType: 4
     m_Sprites:
     - {fileID: 0}

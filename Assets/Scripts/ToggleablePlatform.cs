@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 namespace GGJ2021
 {
@@ -12,20 +11,11 @@ namespace GGJ2021
     public Material matOn, matOff;
     private MeshRenderer rend;
     private Collider2D coll;
-    private Settings settings;
 
     private MaterialPropertyBlock rendProps;
 
     void OnEnable()
     {
-      Addressables
-          .LoadAssetAsync<Settings>(Settings.PATH)
-          .Completed += handle =>
-          {
-            settings = handle.Result;
-            Toggle(toggled);
-          };
-
       rend = GetComponent<MeshRenderer>();
       coll = GetComponent<Collider2D>();
       rendProps = new MaterialPropertyBlock();
@@ -35,8 +25,6 @@ namespace GGJ2021
 
     public virtual void Toggle(bool enable)
     {
-      if (settings == null) return;
-
       if (enable) rend.material = matOn;
       else rend.material = matOff;
 

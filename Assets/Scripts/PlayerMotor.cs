@@ -2,6 +2,7 @@
 using UnityEngine.AddressableAssets;
 using UnityEngine.InputSystem;
 using UnityEngine.VFX;
+using UnityEngine.UI;
 using static UnityEngine.InputSystem.InputAction;
 
 namespace GGJ2021
@@ -10,6 +11,16 @@ namespace GGJ2021
   [RequireComponent(typeof(Rigidbody2D), typeof(CapsuleCollider2D))]
   public class PlayerMotor : MonoBehaviour
   {
+
+    public static float walkSpeedBoost = 7;
+    public static float walkSpeedCap = 50;
+
+    public static float runSpeedBoost = 9;
+    public static float runSpeedCap = 90;
+
+    public static float jumpHeight = 4;
+    public static float jumpGravity = 8;
+
 
     [Range(.2f, 1.2f)]
     public float feetOffset = .4f;
@@ -20,8 +31,6 @@ namespace GGJ2021
     public LayerMask jumpableLayers;
 
     public Transform mesh;
-
-    private Settings settings;
 
     private Rigidbody2D rb;
 
@@ -47,12 +56,12 @@ namespace GGJ2021
 
     private float speedBoost
     {
-      get { return running ? settings.runSpeedBoost : settings.walkSpeedBoost; }
+      get { return running ? runSpeedBoost : walkSpeedBoost; }
     }
 
     private float speedCap
     {
-      get { return running ? settings.runSpeedCap : settings.walkSpeedCap; }
+      get { return running ? runSpeedCap : walkSpeedCap; }
     }
 
     void OnValidate()
@@ -69,10 +78,6 @@ namespace GGJ2021
     void OnEnable()
     {
       FindComponents();
-      Addressables
-          .LoadAssetAsync<Settings>(Settings.PATH)
-          .Completed += handle => settings = handle.Result;
-
       vfxBaseAngle = vfx.GetFloat("Out Angle");
     }
 
@@ -91,8 +96,6 @@ namespace GGJ2021
 
     void FixedUpdate()
     {
-      if (settings == null) return;
-
       RaycastHit2D hit = Physics2D.Raycast(feet + Vector3.up * playerCollider.bounds.size.y / 10f + deltaFeet, Vector2.down, floorDetection, jumpableLayers.value);
       if (hit.collider == null)
         hit = Physics2D.Raycast(feet + Vector3.up * playerCollider.bounds.size.y / 10f - deltaFeet, Vector2.down, floorDetection, jumpableLayers.value);
@@ -113,7 +116,7 @@ namespace GGJ2021
         float sign = Mathf.Sign(rawVelocity);
         Vector2 movForce = Vector2.right * Mathf.Max(speedCap - rb.velocity.x * sign, speedBoost * sign) * rawVelocity;
         if (!grounded)
-          movForce += (settings.jumpGravity - 1) * Physics2D.gravity;
+          movForce += (jumpGravity - 1) * Physics2D.gravity;
         rb.AddForce(movForce * Time.fixedDeltaTime, ForceMode2D.Impulse);
       }
     }
@@ -183,8 +186,8 @@ namespace GGJ2021
 
     private void Jump()
     {
-      if (settings == null || jumping) return;
-      float v0 = 2 * Mathf.Sqrt(2 * settings.jumpGravity * settings.jumpHeight * -Physics2D.gravity.y);
+      if (jumping) return;
+      float v0 = 2 * Mathf.Sqrt(2 * jumpGravity * jumpHeight * -Physics2D.gravity.y);
       rb.AddForce(Vector2.up * v0, ForceMode2D.Impulse);
       jumping = true;
       jumpFlag = true;

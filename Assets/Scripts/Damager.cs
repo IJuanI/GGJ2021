@@ -6,7 +6,7 @@ namespace GGJ2021
   public class Damager : MonoBehaviour
   {
 
-    private float hitThreshold = 5f;
+    private float hitThreshold = 3f;
     private Rigidbody2D rb;
 
     void Start()
